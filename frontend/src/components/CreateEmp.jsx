@@ -29,11 +29,11 @@ function CreateEmp() {
         navigate("/list");
       } else {
         let errorRes = await res.json();
-        console.log("error responce is ", errorRes);
+       // console.log("error responce is ", errorRes);
         throw new Error(errorRes.reason);
       }
     } catch (err) {
-      console.log("err in catch", err);
+     // console.log("err in catch", err);
       //deal with err
       setError(err.message);
     } finally {
@@ -41,7 +41,7 @@ function CreateEmp() {
     }
   };
 
-  console.log(error);
+  //console.log(error);
 
   if (loading) {
     return <p className="text-center text-4xl">Loading....</p>;
@@ -96,3 +96,32 @@ function CreateEmp() {
 }
 
 export default CreateEmp;
+
+
+/*
+
+ GET
+   fetch(endpoint,{method:"GET"})
+ POST
+    fetch(endpoint,{ method:"POST",
+                    headers:{"Content-Type":app/json}
+                    body:JSON.strigfy(resource)
+                    })
+
+ PUT
+    fetch(endpoint,{ method:"PUT",
+                    headers:{"Content-Type":app/json}
+                    body:JSON.strigfy(resource)
+                    })
+*/
+
+/*
+
+ GET
+   axios.get(endpoint)
+ POST
+  axios.post(endpoint,resource)
+ PUT
+  axios.put(endpoint,resource)
+
+*/

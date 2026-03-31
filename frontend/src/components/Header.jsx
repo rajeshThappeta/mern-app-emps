@@ -10,7 +10,7 @@ function Header() {
         CreateEmp
       </NavLink>
       <NavLink to="list" className={({ isActive }) => (isActive ? "text-yellow-400" : "")}>
-        Employees
+        List of Employees
       </NavLink>
     </nav>
   );
